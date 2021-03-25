@@ -25,20 +25,25 @@ interface Person {
 
     function filterPersons(persons: Person[], criteria: any): Person[] {
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
-    
-    return null;
+    let filtered = persons.filter((el) => Object.values(criteria));
+    return filtered;
     }
 
-    users.forEach(logPerson)
-    const tab = [...users,...admins]
 
-    tab.forEach(logPerson)
 
-    const filtered = tab.filter((User)=>User.age>25)
-    filtered.forEach(logPerson)
+  
+
+
     // TODO:
     // 1. Przy pomocy funkcji logPerson wypisać osoby z tablicy users i admins (patrz foreach)
+    users.forEach((tab)=>logPerson(tab))
+    admins.forEach((tab)=>logPerson(tab))
     // 2. Złączyć tablice users i admins i wypisać zawartość złączonej tablicy na konsoli (patrz operator spread)
+    const tab = [...users,...admins]
+    tab.forEach(logPerson)
     // 3. Wypisać osoby powyżej 25 lat (patrz operator filter)
+    const filtered = tab.filter((User)=>User.age>25)
+    filtered.forEach(logPerson)
     // 4. Wypisać osoby o imieniu Adam (zaimplementować funkcję filterPersons) -> const filtered = filterPersons(persons, { name: 'Adam' });
+    filterPersons(tab, { name: "Adam"});
      
