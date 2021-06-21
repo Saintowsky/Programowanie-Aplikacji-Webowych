@@ -12,7 +12,7 @@ body {
     align-content: center;
 
 }
-.board {
+#board {
     display: flex;
     width: 350px;
     height: 350px;
@@ -192,6 +192,8 @@ body {
 }
 
 #numberOfTries {
+    margin-top: 20px;
+    border-radius: 15px;
     font-size: 50px;
     text-align: center;
     align-items: center;
