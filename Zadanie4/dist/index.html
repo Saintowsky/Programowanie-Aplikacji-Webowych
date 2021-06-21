@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="Board.css" />
+  </head>
+  <body>
+    <div id="menuContainer">
+    <div id="menuButtons">
+      <button id="guessTheNumber">Guess the number</button>
+      <button  id="TicTacToe">Tic Tac Toe</button>
+    </div>
+    </div>
+    <div id="TicTacToeContainer" style="display: none;">
+    <div class="pageContainer">
+      <div id="buttons">
+      <button id="reset">RESET</button>
+    </div>
+      <div class="boardContainer">
+        <div class="board">
+          <div class="cells" name="0"><button></button></div>
+          <div class="cells" name="1"><button></button></div>
+          <div class="cells" name="2"><button></button></div>
+          <div class="cells" name="3"><button></button></div>
+          <div class="cells" name="4"><button></button></div>
+          <div class="cells" name="5"><button></button></div>
+          <div class="cells" name="6"><button></button></div>
+          <div class="cells" name="7"><button></button></div>
+          <div class="cells" name="8"><button></button></div>
+        </div>
+      </div>
+      <div id="winnerInfo"></div>
+      <div id="playerTurn"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="GuessTheNumberContainer">
+  <div id="guessTheNumberButton">
+    <button id="resetGuessing">RESET</button>
+  </div>
+  <div id="gameContainer">
+    <div id="setters">
+      <div id="minNumberSetter">
+    <input type="text" id="minNumber" placeholder="Mininum number">
+    <button id="setMin">Set</button>
+  </div>
+  <div id="maxNumberSetter">
+    <input type="text" id="maxNumber"  disabled = "true" placeholder="Maximum number">
+    <button id="setMax">Set</button>
+  </div>
+  </div>
+  <div>
+    <div id="isReady"></div>
+  </div>
+<div id="actualGame">
+  
+  <input type="text" id="guessingField">
+  <button id="check">Check</button>
+</div>
+<div id="howClose"></div>
+<div id="numberOfTries"></div>
+</div>
+</div>
+    <script src="bundle.js"></script>
+  </body>
+</html>

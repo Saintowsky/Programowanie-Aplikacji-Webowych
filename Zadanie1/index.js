@@ -5,7 +5,7 @@ var Person = /** @class */ (function () {
         this.wiek = wiek;
     }
     Person.prototype.Show = function () {
-        document.body.innerHTML = "<h1>Witaj " + p.imie + " i " + p.nazwisko + " mam " + p.wiek + " lat</h1>";
+        document.body.innerHTML = "<h1>Witaj, nazywam się " + p.imie + " " + p.nazwisko + " i  mam " + p.wiek + " lat</h1>";
     };
     return Person;
 }());

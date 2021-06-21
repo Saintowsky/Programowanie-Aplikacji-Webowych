@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: background-color 2s cubic-bezier(1, 1, 1, 1);
+        transition-delay: 0s;
+        background-Color: dodgerblue
+}
+
+
+.boardContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.board {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    flex-wrap: wrap;
+    border: 0.1rem solid black;
+    justify-content: center;
+    align-content: center;
+}
+
+.cells button {
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cells {
+    display: flex;
+    border: 0.1rem solid black;
+    width: 100px;
+    height: 100px;  
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 70px;
+}
+
+#winnerInfo {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#playerTurn {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#buttons {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#menuButtons button {
+    border-radius: 15px;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#menuButtons {
+    padding: 10px;
+    background-color: whitesmoke;
+    border: 0.2rem solid aquamarine;
+    border-radius: 15px;
+}
+#menuContainer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#menuContainer button {
+    margin-inline: 15px;
+    height: 25px;
+}
+
+#gameContainer{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#setters {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#minNumberSetter {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#maxNumberSetter {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+#setters input {
+    outline: none;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+#setters button {
+    margin-top: 10px;
+    width: 50px;
+    outline: none;
+    height: 50px;
+    border-radius: 30px;
+    display: block;
+    
+}
+
+#GuessTheNumberContainer {
+    margin: 30px;
+    margin-left: 55px;
+    margin-top: 28px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#actualGame {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#isReady {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#howClose {
+    display: none;
+    margin-top: 20px;
+    margin-left: 30%;
+    width: 700px;
+    padding: 10px;
+    border: 0.1rem solid black;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#guessTheNumberButton {
+    margin-top: 20px;
+    margin-left: -25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#numberOfTries {
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
