@@ -27,7 +27,7 @@ class GuessTheNumber implements GameMenu {
   }
 }
 
-class ProductFactory implements Factory {
+class GameFactory implements Factory {
   ChooseGame(name): GameMenu {
     switch(name) {
       case 'TicTacToe':
@@ -40,7 +40,7 @@ class ProductFactory implements Factory {
   }
 }
 
-const factory = new ProductFactory();
+const factory = new GameFactory();
 
 let guessTheNumberContainer = document.getElementById(
   "GuessTheNumberContainer"
@@ -98,7 +98,7 @@ const playWithAI = () => {
   (playWithAIButton as HTMLButtonElement).disabled = true;
   (playOtherPlayerButton as HTMLButtonElement).disabled = true;
   elementCells.forEach((element) => {
-    element.addEventListener("click", () => {fillCell(element); AIMove()});
+    element.addEventListener("click", () => {AIfillCell(element); AIMove()});
   });
 }
 
@@ -128,6 +128,17 @@ const AIMove = () => {
   counter++
 }
 
+const AIfillCell = (element: Element) => {
+  if (counter % 2 === 0) {
+    currentSign = Sign.O;
+    element.children[0].innerHTML = currentSign.toString();
+    (element.children[0] as HTMLButtonElement).disabled = true;
+  }
+  counter++;
+  let x = element.attributes[1].value as unknown as number;
+  cells[x] = currentSign.toString();
+  checkWinner();
+};
 
 
 const fillCell = (element: Element) => {
@@ -142,9 +153,7 @@ const fillCell = (element: Element) => {
     element.children[0].innerHTML = currentSign.toString();
     (element.children[0] as HTMLButtonElement).disabled = true;
     element as HTMLElement;
-    (
-      document.getElementById("playerTurn") as HTMLElement
-    ).innerHTML = `It's player 1's turn ( O )`;
+    ( document.getElementById("playerTurn") as HTMLElement ).innerHTML = `It's player 1's turn ( O )`;
   }
   counter++;
   let x = element.attributes[1].value as unknown as number;
@@ -217,8 +226,6 @@ const endGame = (player: Sign) => {
 };
 
 const reset = () => {
-  (document.getElementById("playerTurn") as HTMLElement).innerHTML =
-    "Wybierz tryb!";
   cells = new Array(9);
   counter = 0;
   (document.getElementById("winnerInfo") as HTMLElement).innerHTML = "";
